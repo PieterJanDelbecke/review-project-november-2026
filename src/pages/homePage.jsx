@@ -6,6 +6,7 @@ import Card from "../components/card";
 
 const Container = styled.div`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   background-color: yellow;
   border: 1px solid red;
@@ -43,7 +44,7 @@ const Home = () => {
         {popularMovies.map((movie) => {
           return (
             <div key={movie.id}>
-              <Card movie={movie} />
+              <Card movie={movie} size="w500" />
             </div>
           );
         })}
