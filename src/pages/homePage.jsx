@@ -6,6 +6,7 @@ import Card from "../components/card";
 
 const Container = styled.div`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   background-color: yellow;
   border: 1px solid red;
@@ -40,13 +41,17 @@ const Home = () => {
     <>
       <h1>Home Page</h1>
       <Container>
-        {popularMovies.map((movie) => {
-          return (
-            <div key={movie.id}>
-              <Card movie={movie} />
-            </div>
-          );
-        })}
+        {popularMovies.length !== 0 ? (
+          popularMovies.map((movie) => {
+            return (
+              <div key={movie.id}>
+                <Card movie={movie} size="w500" />
+              </div>
+            );
+          })
+        ) : (
+          <h3>Loading</h3>
+        )}
       </Container>
     </>
   );
