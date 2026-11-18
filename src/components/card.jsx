@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const Container = styled.div`
   padding: 10px;
   margin: 10px;
-  background-color: green;
+  background-color: pink;
   border: 1px solid black;
 `;
 
