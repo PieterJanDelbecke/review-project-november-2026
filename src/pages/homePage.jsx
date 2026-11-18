@@ -41,13 +41,17 @@ const Home = () => {
     <>
       <h1>Home Page</h1>
       <Container>
-        {popularMovies.map((movie) => {
-          return (
-            <div key={movie.id}>
-              <Card movie={movie} size="w500" />
-            </div>
-          );
-        })}
+        {popularMovies.length !== 0 ? (
+          popularMovies.map((movie) => {
+            return (
+              <div key={movie.id}>
+                <Card movie={movie} size="w500" />
+              </div>
+            );
+          })
+        ) : (
+          <h3>Loading</h3>
+        )}
       </Container>
     </>
   );
