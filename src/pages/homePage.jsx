@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import api from "../api/api";
 import styled from "@emotion/styled";
 
+import { PageTitle } from "../styling/styles";
+
 import Card from "../components/card";
 
 const Container = styled.div`
@@ -39,7 +41,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Home Page</h1>
+      <PageTitle>Home Page</PageTitle>
       <Container>
         {popularMovies.length !== 0 ? (
           popularMovies.map((movie) => {
