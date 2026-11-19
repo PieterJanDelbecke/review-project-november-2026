@@ -11,7 +11,7 @@ const About = () => {
   };
   return (
     <>
-      <PageTitle>About Page</PageTitle>
+      <PageTitle>ABOUT</PageTitle>
       <form onSubmit={handleSubmit}>
         <div>
           <input

@@ -3,7 +3,7 @@ import { PageTitle } from "../styling/styles";
 const Favourites = () => {
   return (
     <>
-      <PageTitle>Favourites Page</PageTitle>
+      <PageTitle>FAVOURITES</PageTitle>
     </>
   );
 };

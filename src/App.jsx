@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import AppContext from "./context/AppContext";
+import GlobalStyles from "./styling/Global";
 
 import Home from "./pages/homePage";
 import Favourites from "./pages/favouritesPage";
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <AppContext.Provider value={{ appContext, setAppContext }}>
+        <GlobalStyles />
         <BrowserRouter>
           <NavBar />
           <Routes>

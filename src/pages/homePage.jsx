@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <>
-      <PageTitle>Home Page</PageTitle>
+      <PageTitle>HOME</PageTitle>
       <Container>
         {popularMovies.length !== 0 ? (
           popularMovies.map((movie) => {
