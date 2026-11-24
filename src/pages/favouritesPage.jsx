@@ -1,7 +1,9 @@
+import { PageTitle } from "../styling/styles";
+
 const Favourites = () => {
   return (
     <>
-      <h1>Favourites Page</h1>
+      <PageTitle>FAVOURITES</PageTitle>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PageTitle } from "../styling/styles";
 
 const About = () => {
   const [firstName, setFirstName] = useState("");
@@ -10,7 +11,7 @@ const About = () => {
   };
   return (
     <>
-      <h1>About Page</h1>
+      <PageTitle>ABOUT</PageTitle>
       <form onSubmit={handleSubmit}>
         <div>
           <input
