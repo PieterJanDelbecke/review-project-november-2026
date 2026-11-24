@@ -18,6 +18,7 @@ const NavBar = () => {
       <Container>
         <StyledLink to="/">HOME</StyledLink>
         <StyledLink to="/favourites">FAVOURITES</StyledLink>
+        <StyledLink to="/stats">STATS</StyledLink>
         <StyledLink to="/about">ABOUT</StyledLink>
       </Container>
     </>
