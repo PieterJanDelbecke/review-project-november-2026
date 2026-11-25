@@ -4,7 +4,6 @@ import {
   Pie,
   Tooltip,
   Legend,
-  ResponsiveContainer,
   BarChart,
   Bar,
   XAxis,
@@ -20,10 +19,10 @@ const expenseBreakdown = [
 ];
 
 const monthlyCashflow = [
-  { month: "Jan", revenue: 4200, expenses: 2400 },
-  { month: "Feb", revenue: 4800, expenses: 2650 },
-  { month: "Mar", revenue: 5100, expenses: 2900 },
-  { month: "Apr", revenue: 4650, expenses: 2500 },
+  { month: "Jan", revenue: 4200, expenses: 2400, profit: 1500 },
+  { month: "Feb", revenue: 4800, expenses: 2650, profit: 2000 },
+  { month: "Mar", revenue: 5100, expenses: 2900, profit: 1600 },
+  { month: "Apr", revenue: 4650, expenses: 2500, profit: 1300 },
 ];
 
 const Stats = () => {
@@ -53,32 +52,39 @@ const Stats = () => {
           <Tooltip formatter={(value) => `$${value}`} />
           <Legend />
         </PieChart>
+        <BarChart
+          responsive
+          data={monthlyCashflow}
+          style={{ width: "100%", maxHeight: 340, aspectRatio: 1.618 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis width="auto" />
+          <Tooltip formatter={(value) => `$${value}`} />
+          <Legend />
+          <Bar
+            dataKey="revenue"
+            name="Revenue"
+            fill="#2563eb"
+            radius={[6, 6, 0, 0]}
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="expenses"
+            name="Expenses"
+            fill="#d97706"
+            radius={[6, 6, 0, 0]}
+            isAnimationActive={false}
+          />
+          <Bar
+            dataKey="profit"
+            name="Profit"
+            fill="#ece908"
+            radius={[6, 6, 0, 0]}
+            isAnimationActive={false}
+          />
+        </BarChart>
       </div>
-      <BarChart
-        responsive
-        data={monthlyCashflow}
-        style={{ width: "100%", maxHeight: 340, aspectRatio: 1.618 }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="month" />
-        <YAxis width="auto" />
-        <Tooltip formatter={(value) => `$${value}`} />
-        <Legend />
-        <Bar
-          dataKey="revenue"
-          name="Revenue"
-          fill="#2563eb"
-          radius={[6, 6, 0, 0]}
-          isAnimationActive={false}
-        />
-        <Bar
-          dataKey="expenses"
-          name="Expenses"
-          fill="#d97706"
-          radius={[6, 6, 0, 0]}
-          isAnimationActive={false}
-        />
-      </BarChart>
     </>
   );
 };
